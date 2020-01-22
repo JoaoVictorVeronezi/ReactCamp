@@ -28,9 +28,8 @@ const MainScreen = () => {
     <StyledContainer>
       <StyledContainer>
         <StyledImage  src={logo}/>
-        <StyledButton onClick={pokesList}>Clique aqui</StyledButton>
-        <StyledButton onClick={proximo}>Próximo</StyledButton>
-    <StyledButton onClick={anterior}>Anterior</StyledButton>
+        <StyledButton onClick={proximo}>Prox</StyledButton>
+        <StyledButton onClick={anterior}>Ant</StyledButton>
       </StyledContainer>
       <div>
       <StyledRow>{pokeList.map((poke, index) => <PokeCard pokemon={poke} index = {page * 20 + ( index + 1 )} />)}</StyledRow>
@@ -54,26 +53,22 @@ const StyledContainer = styled.div`
   background-color: #282c34;
 `;
 
-const StyledLabel = styled.p`
-  color: white;
-  font-size: 20;
-`;
 
 const StyledButton = styled.button`
-  width: 300px;
+  width: 100px;
   height: 40px;
   border-radius: 10px;
   background-color: white;
   :focus {
     outline: 0;
   }
-  margin-top: 5%;
+  margin-top: 5px;
+  
 `;
 
 const StyledImage = styled.img`
   height: 100px;
   width: 300px;
-  
 `;
 
 export default MainScreen;
